@@ -1,0 +1,36 @@
+//GENERALES
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+h1, h2, h3, h4, h5, h6, p, a{
+	text-decoration:none;
+	font-family: "Cormorant", serif;
+}
+a{
+	text-decoration:none !important;
+}
+p{
+	font-size:18px;
+}
+ul{
+	padding-left:0 !important;
+	li {
+    	list-style-type: none;
+	}
+}
+.boton-default{
+	@extend %boton;
+	background-color:map-get($colores,"color-dark-void");
+	&:hover{
+		background-color:map-get($colores,"color-light-void");
+		text-decoration:$text-decoration-line;
+	}
+}
+.boton-disabled{
+	@extend %boton;
+	background-color:map-get($colores,"color-void-secondary");
+	cursor:not-allowed;
+	margin-top:3%;
+}

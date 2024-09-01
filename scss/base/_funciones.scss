@@ -1,0 +1,40 @@
+//COLORES
+$colores:("color-dark-void":#02010A,
+	"color-void":#11001C,
+	"color-light-void":#4F518C,
+	"color-void-secondary":#767481,
+	"color-accent":#858AE3,
+	"color-white":#FBFAFF,
+	"color-void-opacity":rgba(17,0,28,0.9)
+	);
+//VARIABLES EXTRA
+$text-decoration-line:line-through solid 2px;
+$transition-duration:0.4s;
+$transition-function:ease-out;
+//PLACEHOLDERS
+%boton{
+	color:map-get($colores,"color-white");
+	font-size:2em;
+	padding:1% 2%;
+	text-transform:uppercase;
+	letter-spacing:-2px;
+	transition:background-color $transition-duration $transition-function;
+}
+%background-img{
+	background-image:url('../img/fondo.jpg');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	background-size:cover;
+	background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+}
+@media screen and (max-width: 830px){
+	%boton{
+		font-size:1.4em;
+		letter-spacing:0px;
+	}
+}
+@media screen and (max-width: 768px){
+	$text-decoration-line:line-through solid 1px;
+}
