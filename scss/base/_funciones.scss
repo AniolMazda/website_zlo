@@ -29,6 +29,39 @@ $transition-function:ease-out;
 	background-color: rgba(255,255,255,0.6);
     background-blend-mode: lighten;
 }
+//MIXINS
+@mixin grid($values-column, $values-row, $list-names, $align: false, $gap: 0, $place-items: stretch, $align-content: start){
+	display:grid;
+	grid-template-columns:$values-column;
+	grid-template-rows:$values-row;
+	@if $list-names != ""{
+		grid-template-areas:$list-names;
+	}
+	@if $align{
+		gap:$gap;
+		place-items:$place-items;
+		align-content:$align-content;
+	}
+}
+@mixin grid-items($grid-area, $justify-self: stretch, $align-self: stretch){
+	grid-area:$grid-area;
+	justify-self:$justify-self;
+	align-self:$align-self;
+}
+@mixin flex($flex-direction, $justify-content, $align-items, $gap: normal, $wrap: false, $flex-wrap: wrap, $align-content: stretch){
+	display:flex;
+	flex-direction:$flex-direction;
+	justify-content:$justify-content;
+	align-items:$align-items;
+	@if $gap != normal{
+		gap:$gap;
+	}
+	@if $wrap{
+		flex-wrap:$flex-wrap;
+		align-content:$align-content;
+	}
+}
+//MEDIA QUERIES EN VARIABLES
 @media screen and (max-width: 830px){
 	%boton{
 		font-size:1.4em;

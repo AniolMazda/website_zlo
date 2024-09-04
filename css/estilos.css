@@ -70,15 +70,15 @@ ul {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "menu1 logo menu2" "menu3 logo menu4";
+    grid-template-areas: "menu1 logo menu2" "menu3 logo menu4";
     height: 100vh; }
     .home header nav ul li {
-      width: 80px;
-      height: 80px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 80px;
+      height: 80px;
       position: relative;
       background-color: #FBFAFF;
       transition: background-color 0.4s ease-out, color 0.4s ease-out;
@@ -118,6 +118,8 @@ ul {
       background-color: transparent;
       width: auto;
       height: auto; }
+      .home header nav ul .bloq-logo:hover {
+        background-color: transparent; }
       .home header nav ul .bloq-logo img {
         width: 70%;
         display: block;
@@ -137,36 +139,41 @@ ul {
 /*!		TEMPLATE PAGES 		*/
 .page {
   display: grid;
-  grid-template-rows: 1fr auto;
   grid-template-columns: 100px 1fr;
-  grid-template-areas: "header content" "header footer"; }
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "header content" "header footer"; }
   .page header {
-    padding-left: 2%;
-    padding-right: 2%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    grid-area: header;
+    justify-self: stretch;
+    align-self: stretch;
+    padding-left: 2%;
+    padding-right: 2%;
     height: 100vh;
     position: sticky;
-    top: 0;
-    grid-area: header; }
+    top: 0; }
     .page header nav {
       display: flex;
-      flex-grow: 3;
-      align-items: center; }
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-grow: 3; }
       .page header nav ul {
         display: flex;
         flex-direction: column;
-        height: 100%;
-        justify-content: space-around; }
+        justify-content: space-around;
+        align-items: stretch;
+        height: 100%; }
         .page header nav ul li {
-          width: 80px;
-          height: 80px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          width: 80px;
+          height: 80px;
           position: relative;
           background-color: transparent;
           opacity: 0.7;
@@ -186,13 +193,13 @@ ul {
     .page header .menu-responsive {
       display: none; }
     .page header .bloq-redes {
-      flex-grow: 1;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 40px 40px;
       gap: 5% 20%;
       place-items: center;
-      align-content: center; }
+      align-content: center;
+      flex-grow: 1; }
       .page header .bloq-redes div img {
         aspect-ratio: 1/1;
         width: 30px;
@@ -207,10 +214,12 @@ ul {
   .page .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
     border-right-color: rgba(17, 0, 28, 0.9) !important; }
   .page main {
+    grid-area: content;
+    justify-self: stretch;
+    align-self: stretch;
     padding-top: 2%;
     padding-left: 2%;
-    padding-right: 2%;
-    grid-area: content; }
+    padding-right: 2%; }
     .page main h1 {
       font-size: 3em;
       font-weight: 600;
@@ -229,8 +238,10 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 3%;
-    grid-area: footer; }
+    grid-area: footer;
+    justify-self: stretch;
+    align-self: stretch;
+    padding-bottom: 3%; }
     .page footer p {
       font-size: 1.8em;
       color: #767481;
@@ -239,9 +250,10 @@ ul {
       mix-blend-mode: difference; }
     .page footer div {
       display: flex;
-      gap: 10%;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
+      gap: 10%;
       margin: 1% 0%; }
       .page footer div a img {
         width: 40px;
@@ -256,7 +268,11 @@ ul {
 /*!		MUSIC		*/
 .bloq-albums {
   display: flex;
-  flex-wrap: wrap; }
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  align-content: stretch; }
   .bloq-albums .bloq-albums__album {
     width: 45%;
     margin: 0% 2.5% 5%;
@@ -272,14 +288,14 @@ ul {
       transition: filter 0.4s ease-out;
       filter: brightness(100%) saturate(1); }
     .bloq-albums .bloq-albums__album .bloq-albums__album__content {
-      position: absolute;
-      top: 0;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      position: absolute;
+      top: 0;
       width: 100%;
       height: 100%;
-      flex-direction: column;
       rotate: 4deg;
       opacity: 0;
       transition: opacity 0.4s ease-out; }
@@ -306,16 +322,22 @@ ul {
 /*!		MEDIA		*/
 .bloq-media {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "fotos ." "fotos videos" ". videos";
-  column-gap: 2%;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "fotos ." "fotos videos" ". videos";
+  gap: 0 2%;
+  place-items: stretch;
+  align-content: start;
   padding: 0 2.5%;
   margin-bottom: 5%; }
   .bloq-media .bloq-media__fotos {
-    grid-area: fotos; }
+    grid-area: fotos;
+    justify-self: stretch;
+    align-self: stretch; }
   .bloq-media .bloq-media__videos {
-    grid-area: videos; }
+    grid-area: videos;
+    justify-self: stretch;
+    align-self: stretch; }
   .bloq-media .bloq-media--hover {
     overflow: hidden;
     position: relative; }
@@ -326,14 +348,14 @@ ul {
       transition: filter 0.4s ease-out;
       filter: brightness(100%) saturate(1); }
   .bloq-media .bloq-media__hover__content {
-    position: absolute;
-    top: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 0;
     width: 100%;
     height: 100%;
-    flex-direction: column;
     rotate: 4deg;
     opacity: 0;
     transition: opacity 0.4s ease-out; }
@@ -382,12 +404,12 @@ ul {
     .home header .home-nav-responsive ul {
       grid-template-columns: 20% 1fr 20%; }
       .home header .home-nav-responsive ul li {
-        width: auto;
-        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: auto;
+        height: auto;
         position: relative;
         padding: 2% 10%;
         background-color: #FBFAFF;

@@ -56,12 +56,9 @@
 				ul{
 					grid-template-columns: 20% 1fr 20%;
 					li{
+						@include flex(column, center, center);
 						width:auto;
 						height:auto;
-						display:flex;
-						flex-direction:column;
-						justify-content:center;
-						align-items:center;
 						position:relative;
 						padding:2% 10%;
 						background-color:map-get($colores,"color-white");

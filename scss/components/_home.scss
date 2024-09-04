@@ -16,19 +16,12 @@
 		}
 		nav{
 			ul{
-				display:grid;
-				grid-template-columns:1fr 5fr 1fr;
-				grid-template-rows:1fr 1fr;
-				grid-template-areas:"menu1 logo menu2"
-				"menu3 logo menu4";
+				@include grid(1fr 5fr 1fr, 1fr 1fr, "menu1 logo menu2" "menu3 logo menu4");
 				height:100vh;
 				li{
+					@include flex(column, center, center);
 					width:80px;
 					height:80px;
-					display:flex;
-					flex-direction:column;
-					justify-content:center;
-					align-items:center;
 					position:relative;
 					background-color:map-get($colores,"color-white");
 					transition:background-color $transition-duration $transition-function, color $transition-duration $transition-function;
@@ -48,35 +41,28 @@
 					}
 				}
 				.home-item-1{
-					grid-area:menu1;
-					justify-self:start;
-					align-self:start;
+					@include grid-items(menu1, start, start);
 				}
 				.home-item-2{
-					grid-area:logo;
-					justify-self:center;
-					align-self:center;
+					@include grid-items(logo, center, center);
 				}
 				.home-item-3{
-					grid-area:menu2;
-					justify-self:end;
-					align-self:start;
+					@include grid-items(menu2, end, start);
 				}
 				.home-item-4{
-					grid-area:menu3;
-					justify-self:start;
-					align-self:end;
+					@include grid-items(menu3, start, end);
 				}
 				.home-item-5{
-					grid-area:menu4;
-					justify-self:end;
-					align-self:end;
+					@include grid-items(menu4, end, end);
 				}
 				.bloq-logo{
 					mix-blend-mode:difference;
 					background-color:transparent;
 					width:auto;
 					height:auto;
+					&:hover{
+						background-color:transparent;
+					}
 					img{
 						width:70%;
 						display:block;
