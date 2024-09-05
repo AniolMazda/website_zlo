@@ -1,6 +1,6 @@
 //COLORES
 $colores:("color-dark-void":#02010A,
-	"color-void":#11001C,
+	"color-void":#1D0B43,
 	"color-light-void":#4F518C,
 	"color-void-secondary":#767481,
 	"color-accent":#858AE3,
@@ -8,6 +8,7 @@ $colores:("color-dark-void":#02010A,
 	"color-void-opacity":rgba(17,0,28,0.9)
 	);
 //VARIABLES EXTRA
+$font-family:"Cormorant", serif;
 $text-decoration-line:line-through solid 2px;
 $transition-duration:0.4s;
 $transition-function:ease-out;
@@ -28,6 +29,13 @@ $transition-function:ease-out;
 	background-size:cover;
 	background-color: rgba(255,255,255,0.6);
     background-blend-mode: lighten;
+}
+%background-products{
+	background-image:url('../img/fondo-productos.jpg');
+	background-repeat:no-repeat;
+	background-attachment:local;
+	background-position:center;
+	background-size:cover;
 }
 //MIXINS
 @mixin grid($values-column, $values-row, $list-names, $align: false, $gap: 0, $place-items: stretch, $align-content: start){
@@ -70,4 +78,9 @@ $transition-function:ease-out;
 }
 @media screen and (max-width: 768px){
 	$text-decoration-line:line-through solid 1px;
+}
+@media screen and (max-width: 340px){
+	%boton{
+		font-size:1.1em;
+	}
 }

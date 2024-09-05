@@ -21,6 +21,7 @@
 	}
 }
 @media screen and (max-width: 830px){
+	/*		MUSIC		*/
 	.bloq-albums{
 		.bloq-albums__album{
 			.bloq-albums__album__content{
@@ -34,6 +35,27 @@
 			}
 		}
 	}
+	/*		MERCH		*/
+	.bloq-merch{
+		.bloq-merch__filters{
+			h2{
+				font-size:2em;
+			}
+			select{
+				font-size:1em;
+				padding:1.2%;
+			}
+		}
+		.bloq-merch__products{
+			ul{
+				gap:2%;
+				li{
+					width:49%;
+				}
+			}
+		}
+	}
+	/*		TEMPLATE PAGE		*/
 	.page{
 		footer{
 			p{
@@ -116,16 +138,83 @@
 			}
 		}
 	}
+	/*		MEDIA		*/
+	.bloq-media{
+		.bloq-media__hover__content{
+			h2{
+				font-size: 2.5em;
+				letter-spacing:-2px;
+				margin-bottom:0%;
+			}
+			hr{
+				margin: 1% 0% 2%;
+			}
+		}
+	}
+		/*		MERCH		*/
+	.bloq-merch{
+		.bloq-merch__filters{
+			h2{
+				font-size:1.8em;
+			}
+		}
+	}
 }
 @media screen and (max-width: 680px){	
+	/*		MUSIC		*/
 	.bloq-albums{
 		.bloq-albums__album{
 			width: 95%;
     		margin: 0% 2.5% 2.5%;
 		}
 	}
+	/*		MEDIA 		*/
+	.bloq-media{
+		@include grid(1fr, 1fr, "fotos" "videos", true, 2% 0%);
+	}
+	/*		MERCH		*/
+	.bloq-merch{
+		.bloq-merch__filters{
+			select{
+				width:25%;
+			}
+		}
+		.bloq-merch__products{
+			ul{
+				gap:0%;
+				li{
+					width:100%;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 640px){
+	/*		MERCH		*/
+	.bloq-merch{
+		.bloq-merch__filters{
+			h2{
+				font-size:1.5em;
+			}
+		}
+	}
+}
+@media screen and (max-width: 560px){
+	/*		MERCH		*/
+	.bloq-merch{
+		.bloq-merch__filters{
+			flex-wrap:wrap;
+			justify-content:center;
+			h2{
+				text-align:center;
+				width:100%;
+				margin-bottom:5%;
+			}
+		}
+	}
 }
 @media screen and (max-width: 476px){
+	/*		HOME 		*/
 	.home{
 		header{
 			.home-nav-responsive{
@@ -144,6 +233,7 @@
 			}
 		}
 	}
+	/*		TEMPLATE PAGE		*/
 	.page{
 		grid-template-columns: 100px 1fr;
 		header{
@@ -163,17 +253,19 @@
 			}
 		}
 		footer{
+			p{
+				font-size:1.2em;
+			}
 			div{
 				a{
 					img{
-						width:30px;
+						width:25px;
 					}
 				}
 			}
 		}
 	}
-}
-@media screen and (max-width: 476px){
+	/*		MUSIC		*/
 	.bloq-albums{
 		.bloq-albums__album{
 			.bloq-albums__album__content{
@@ -183,17 +275,44 @@
 			}
 		}
 	}
-	.page{
-		footer{
-			p{
-				font-size:1.2em;
+	/*		MEDIA		*/
+	.bloq-media{
+		.bloq-media__hover__content{
+			h2{
+				font-size: 2em;
 			}
-			div{
-				a{
-					img{
-						width:25px;	
+		}
+	}
+}
+@media screen and (max-width: 425px){
+	/*		MERCH		*/
+	.bloq-merch{
+		.bloq-merch__products{
+			ul{
+				li{
+					div{
+						h3{
+							font-size:1.4em;
+						}
+						p{
+							font-size:1.3em;
+						}
 					}
 				}
+			}
+		}
+		.bloq-merch__filters{
+			select{
+				width:40%;
+			}
+		}
+	}
+}
+@media screen and (max-width: 425px){
+	.bloq-merch{
+		.bloq-merch__filters{
+			select{
+				width:60%;
 			}
 		}
 	}

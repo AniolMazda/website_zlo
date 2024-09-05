@@ -4,9 +4,13 @@
 	padding:0;
 	box-sizing:border-box;
 }
+::selection{
+	color:map-get($colores,"color-white");
+	background:map-get($colores,"color-void");
+}
 h1, h2, h3, h4, h5, h6, p, a{
 	text-decoration:none;
-	font-family: "Cormorant", serif;
+	font-family:$font-family;
 }
 a{
 	text-decoration:none !important;
@@ -22,7 +26,7 @@ ul{
 }
 .boton-default{
 	@extend %boton;
-	background-color:map-get($colores,"color-dark-void");
+	background-color:map-get($colores,"color-void");
 	&:hover{
 		background-color:map-get($colores,"color-light-void");
 		text-decoration:$text-decoration-line;
