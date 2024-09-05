@@ -37,6 +37,12 @@ $transition-function:ease-out;
 	background-position:center;
 	background-size:cover;
 }
+%grid-line{
+	content:'';
+	position:absolute;
+	background-color:map-get($colores,"color-void");
+	z-index:1;
+}
 //MIXINS
 @mixin grid($values-column, $values-row, $list-names, $align: false, $gap: 0, $place-items: stretch, $align-content: start){
 	display:grid;

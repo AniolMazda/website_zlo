@@ -22,6 +22,12 @@
   background-position: center;
   background-size: cover; }
 
+.bloq-bio article .grid-line::before, .bloq-bio article .grid-line::after {
+  content: '';
+  position: absolute;
+  background-color: #1D0B43;
+  z-index: 1; }
+
 @media screen and (max-width: 830px) {
   .boton-default, .boton-disabled {
     font-size: 1.4em;
@@ -50,6 +56,15 @@ a {
 
 p {
   font-size: 18px; }
+
+strong {
+  font-weight: 600;
+  color: #1D0B43; }
+
+i {
+  font-weight: 600;
+  font-style: italic;
+  text-shadow: 2px 2px 5px #1D0B43; }
 
 ul {
   padding-left: 0 !important; }
@@ -461,6 +476,128 @@ ul {
           font-size: 1.5em;
           font-weight: 300;
           font-variant-numeric: lining-nums; }
+
+/*		BIO		*/
+.bloq-bio {
+  padding: 0 2.5%; }
+  .bloq-bio mark {
+    background-color: transparent;
+    padding: 0;
+    color: #1D0B43;
+    letter-spacing: 5px;
+    font-weight: 500; }
+  .bloq-bio .bloq-bio__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%; }
+    .bloq-bio .bloq-bio__intro h2 {
+      color: #1D0B43;
+      text-transform: uppercase;
+      text-decoration: line-through solid 2px;
+      font-size: 2.5em;
+      font-weight: 500;
+      text-align: center; }
+    .bloq-bio .bloq-bio__intro p {
+      color: #02010A;
+      text-align: center;
+      font-size: 1.3em;
+      max-width: 60vw; }
+  .bloq-bio article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20vh 60vh auto 20vh 40vh 40vh 20vh 80vh;
+    grid-template-areas: "titulo1  contenido1" ". contenido1" "imagen imagen" "titulo2 contenido2" "contenido2-5 contenido2" "contenido2-5 contenido2" "titulo3 contenido3" ". contenido3";
+    gap: 0% 2%;
+    place-items: stretch;
+    align-content: start;
+    overflow: hidden; }
+    .bloq-bio article div {
+      position: relative; }
+      .bloq-bio article div h3 {
+        color: #1D0B43;
+        font-size: 2.5em;
+        font-weight: 500; }
+      .bloq-bio article div p {
+        color: #02010A;
+        text-align: justify;
+        font-size: 1.2em;
+        text-indent: 1em; }
+      .bloq-bio article div img {
+        filter: saturate(0%);
+        transform: scale(1);
+        transition: filter 0.4s ease-out, transform 0.4s ease-out; }
+        .bloq-bio article div img:hover {
+          filter: saturate(100%);
+          transform: scale(1.02); }
+    .bloq-bio article .grid-line::before {
+      inline-size: 2px;
+      block-size: 100vh;
+      inset-block-start: 0;
+      inset-inline-start: calc(calc(2%/2)*-1); }
+    .bloq-bio article .article1 {
+      grid-area: titulo1;
+      justify-self: flex-end;
+      align-self: start;
+      rotate: 2deg;
+      top: 5vh;
+      right: 3vw; }
+    .bloq-bio article .article2 {
+      grid-area: contenido1;
+      justify-self: stretch;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 0% 5%;
+      text-align-last: right; }
+      .bloq-bio article .article2 p {
+        rotate: -1deg; }
+    .bloq-bio article .article3 {
+      grid-area: imagen;
+      justify-self: center;
+      align-self: center;
+      z-index: 2; }
+    .bloq-bio article .article4 {
+      grid-area: titulo2;
+      justify-self: flex-end;
+      align-self: start;
+      top: 5vh;
+      rotate: 2deg; }
+    .bloq-bio article .article5 {
+      grid-area: contenido2;
+      justify-self: stretch;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 0% 5%;
+      text-align-last: right; }
+      .bloq-bio article .article5 p {
+        rotate: -1deg; }
+    .bloq-bio article .article6 {
+      grid-area: contenido2-5;
+      justify-self: stretch;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: flex-start;
+      padding: 0% 5%;
+      text-align-last: left; }
+      .bloq-bio article .article6 p {
+        rotate: 1deg; }
+    .bloq-bio article .article7 {
+      grid-area: titulo3;
+      justify-self: stretch;
+      align-self: stretch; }
+    .bloq-bio article .article8 {
+      grid-area: contenido3;
+      justify-self: stretch;
+      align-self: stretch; }
 
 /*!		QUERIES		*/
 @media screen and (max-width: 1200px) {

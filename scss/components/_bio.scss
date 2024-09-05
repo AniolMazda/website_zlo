@@ -1,0 +1,116 @@
+.bloq-bio{
+	mark{
+		background-color:transparent;
+		padding:0;
+		color:map-get($colores,"color-void");
+		letter-spacing:5px;
+		font-weight:500;
+	}
+	padding:0 2.5%;
+	.bloq-bio__intro{
+		@include flex(column, center, center);
+		margin-bottom:2%;
+		h2{
+			color:map-get($colores,"color-void");
+			text-transform:uppercase;
+			text-decoration:$text-decoration-line;
+			font-size:2.5em;
+			font-weight:500;
+			text-align:center;
+		}
+		p{
+			color:map-get($colores,"color-dark-void");
+			text-align:center;
+			font-size:1.3em;
+			max-width: 60vw;
+		}
+	}
+	article{
+		@include grid(1fr 1fr, 20vh 60vh auto 20vh 40vh 40vh 20vh 80vh, "titulo1  contenido1" ". contenido1" "imagen imagen"
+			"titulo2 contenido2" "contenido2-5 contenido2" "contenido2-5 contenido2" "titulo3 contenido3" ". contenido3", true, 0% 2%);
+		overflow:hidden;
+		div{
+			position:relative;
+			h3{
+				color:map-get($colores,"color-void");
+				font-size:2.5em;
+				font-weight:500;
+			}
+			p{
+				color:map-get($colores,"color-dark-void");
+				text-align:justify;
+				font-size:1.2em;
+				text-indent:1em;
+			}
+			img{
+				filter: saturate(0%);
+				transform:scale(1);
+				transition:filter $transition-duration $transition-function, transform $transition-duration $transition-function;
+				&:hover{
+					filter:saturate(100%);
+					transform:scale(1.02);
+				}
+			}
+		}
+		.grid-line{
+			&::before{
+				@extend %grid-line;
+				inline-size:2px;
+				block-size:100vh;
+				inset-block-start:0;
+				inset-inline-start:calc(calc(2%/2)*-1);
+			}
+			&::after{
+				@extend %grid-line;
+			}
+		}
+		.article1{
+			@include grid-items(titulo1, flex-end, start);
+			rotate:2deg;
+			top:5vh;
+			right:3vw;
+		}
+		.article2{
+			@include grid-items(contenido1);
+			@include flex(column, center, flex-end);
+			padding:0% 5%;
+			text-align-last:right;
+			p{
+				rotate:-1deg;
+			}
+		}
+		.article3{
+			@include grid-items(imagen, center, center);
+			z-index:2;
+		}
+		.article4{
+			@include grid-items(titulo2, flex-end, start);
+			top:5vh;
+			rotate:2deg;
+		}
+		.article5{
+			@include grid-items(contenido2);
+			@include flex(column, center, flex-end);
+			padding:0% 5%;
+			text-align-last:right;
+			p{
+				rotate:-1deg;
+			}
+		}
+		.article6{
+			@include grid-items(contenido2-5);
+			@include flex(column, end, flex-start);
+			padding:0% 5%;
+			text-align-last:left;
+			p{
+				rotate:1deg;
+			}
+		}
+		.article7{
+			@include grid-items(titulo3);
+		}
+		.article8{
+			@include grid-items(contenido3);
+		}
+	}
+}
