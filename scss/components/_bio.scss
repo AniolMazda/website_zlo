@@ -26,8 +26,9 @@
 		}
 	}
 	article{
-		@include grid(1fr 1fr, 20vh 60vh auto 20vh 40vh 40vh 20vh 80vh, "titulo1  contenido1" ". contenido1" "imagen imagen"
-			"titulo2 contenido2" "contenido2-5 contenido2" "contenido2-5 contenido2" "titulo3 contenido3" ". contenido3", true, 0% 2%);
+		@include grid(1fr 1fr, 20vh 60vh auto 20vh 40vh 40vh 20vh 40vh 40vh 40vh 40vh, "titulo1  contenido1" ". contenido1" "imagen imagen"
+			"titulo2 contenido2" "contenido2-5 contenido2" "contenido2-5 contenido2" "contenido3 titulo3" "contenido3 ."
+			"contenido3 contenido3-5" "contenido3-75 contenido3-5" "contenido3-75 final", true, 0% 2%);
 		overflow:hidden;
 		div{
 			position:relative;
@@ -90,10 +91,15 @@
 		}
 		.article5{
 			@include grid-items(contenido2);
-			@include flex(column, center, flex-end);
+			@include flex(column, center, center);
 			padding:0% 5%;
 			text-align-last:right;
 			p{
+				rotate:-1deg;
+			}
+			img{
+				margin-top:3%;
+				width:60%;
 				rotate:-1deg;
 			}
 		}
@@ -108,9 +114,70 @@
 		}
 		.article7{
 			@include grid-items(titulo3);
+			@include flex(column, end, flex-end);
+			h3{
+				text-align:right;
+				rotate:-2deg;
+				position:relative;
+				top:7vh;
+			}
 		}
 		.article8{
 			@include grid-items(contenido3);
+			@include flex(column, center, flex-start);
+			padding:0% 5%;
+			p{
+				rotate:1deg;
+			}
+		}
+		.article9{
+			@include grid-items(contenido3-5);
+			@include flex(column, center, center);
+			padding:0% 5%;
+			p{
+				rotate:-1deg;
+			}
+			img{
+				margin-top:3%;
+				width:70%;
+				rotate:-1deg;
+			}
+		}
+		.article10{
+			@include grid-items(contenido3-75);
+			@include flex(column, center, flex-start);
+			padding:0% 5%;
+			p{
+				rotate:1deg;
+			}
+		}
+		.articlefinal{
+			@include grid-items(final);
+			@include flex(column,end,flex-end);
+		}
+	}
+	.bloq-bio__outro{
+		@include flex(column, center, center);
+		margin-bottom:10%;
+		h2{
+			color:map-get($colores,"color-void");
+			text-transform:uppercase;
+			text-decoration:$text-decoration-line;
+			font-size:2.5em;
+			font-weight:500;
+			text-align:center;
+		}
+		a{
+			color:map-get($colores,"color-white");
+			background-color:map-get($colores,"color-void");
+			padding:1% 2%;
+			text-align:center;
+			font-size:1.3em;
+			max-width: 60vw;
+			transition:background-color $transition-duration $transition-function;
+			&:hover{
+				background-color:map-get($colores,"color-accent");
+			}
 		}
 	}
 }

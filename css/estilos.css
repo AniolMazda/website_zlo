@@ -64,7 +64,15 @@ strong {
 i {
   font-weight: 600;
   font-style: italic;
-  text-shadow: 2px 2px 5px #1D0B43; }
+  text-shadow: 2px 2px 5px #767481; }
+
+em {
+  font-family: "Cormorant", serif;
+  font-style: italic;
+  font-weight: 500;
+  padding: 0% 2%;
+  border-left: solid 3px #1D0B43;
+  border-right: solid 3px #1D0B43; }
 
 ul {
   padding-left: 0 !important; }
@@ -507,8 +515,8 @@ ul {
   .bloq-bio article {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20vh 60vh auto 20vh 40vh 40vh 20vh 80vh;
-    grid-template-areas: "titulo1  contenido1" ". contenido1" "imagen imagen" "titulo2 contenido2" "contenido2-5 contenido2" "contenido2-5 contenido2" "titulo3 contenido3" ". contenido3";
+    grid-template-rows: 20vh 60vh auto 20vh 40vh 40vh 20vh 40vh 40vh 40vh 40vh;
+    grid-template-areas: "titulo1  contenido1" ". contenido1" "imagen imagen" "titulo2 contenido2" "contenido2-5 contenido2" "contenido2-5 contenido2" "contenido3 titulo3" "contenido3 ." "contenido3 contenido3-5" "contenido3-75 contenido3-5" "contenido3-75 final";
     gap: 0% 2%;
     place-items: stretch;
     align-content: start;
@@ -573,10 +581,14 @@ ul {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-end;
+      align-items: center;
       padding: 0% 5%;
       text-align-last: right; }
       .bloq-bio article .article5 p {
+        rotate: -1deg; }
+      .bloq-bio article .article5 img {
+        margin-top: 3%;
+        width: 60%;
         rotate: -1deg; }
     .bloq-bio article .article6 {
       grid-area: contenido2-5;
@@ -593,11 +605,84 @@ ul {
     .bloq-bio article .article7 {
       grid-area: titulo3;
       justify-self: stretch;
-      align-self: stretch; }
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: flex-end; }
+      .bloq-bio article .article7 h3 {
+        text-align: right;
+        rotate: -2deg;
+        position: relative;
+        top: 7vh; }
     .bloq-bio article .article8 {
       grid-area: contenido3;
       justify-self: stretch;
-      align-self: stretch; }
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0% 5%; }
+      .bloq-bio article .article8 p {
+        rotate: 1deg; }
+    .bloq-bio article .article9 {
+      grid-area: contenido3-5;
+      justify-self: stretch;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0% 5%; }
+      .bloq-bio article .article9 p {
+        rotate: -1deg; }
+      .bloq-bio article .article9 img {
+        margin-top: 3%;
+        width: 70%;
+        rotate: -1deg; }
+    .bloq-bio article .article10 {
+      grid-area: contenido3-75;
+      justify-self: stretch;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0% 5%; }
+      .bloq-bio article .article10 p {
+        rotate: 1deg; }
+    .bloq-bio article .articlefinal {
+      grid-area: final;
+      justify-self: stretch;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: flex-end; }
+  .bloq-bio .bloq-bio__outro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%; }
+    .bloq-bio .bloq-bio__outro h2 {
+      color: #1D0B43;
+      text-transform: uppercase;
+      text-decoration: line-through solid 2px;
+      font-size: 2.5em;
+      font-weight: 500;
+      text-align: center; }
+    .bloq-bio .bloq-bio__outro a {
+      color: #FBFAFF;
+      background-color: #1D0B43;
+      padding: 1% 2%;
+      text-align: center;
+      font-size: 1.3em;
+      max-width: 60vw;
+      transition: background-color 0.4s ease-out; }
+      .bloq-bio .bloq-bio__outro a:hover {
+        background-color: #858AE3; }
 
 /*!		QUERIES		*/
 @media screen and (max-width: 1200px) {
@@ -606,7 +691,14 @@ ul {
 
 @media screen and (max-width: 950px) {
   .bloq-albums .bloq-albums__album .bloq-albums__album__content h2 {
-    font-size: 2.2em; } }
+    font-size: 2.2em; }
+  /*		BIO		*/
+  .bloq-bio .bloq-bio__intro p {
+    font-size: 1.2em; }
+  .bloq-bio article div h3 {
+    font-size: 2em; }
+  .bloq-bio article div p {
+    font-size: 1em; } }
 
 @media screen and (max-width: 830px) {
   /*		MUSIC		*/
@@ -629,7 +721,19 @@ ul {
   .page footer p {
     font-size: 1.4em; }
   .page footer .sub-texto-footer {
-    font-size: 1em; } }
+    font-size: 1em; }
+  /*		BIO		*/
+  .bloq-bio .bloq-bio__intro h2 {
+    font-size: 2em; }
+  .bloq-bio .bloq-bio__intro p {
+    font-size: 1.1em; }
+  .bloq-bio article div h3 {
+    font-size: 1.6em; }
+  .bloq-bio article .article3 img {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; } }
 
 @media screen and (max-width: 768px) {
   .home header nav {
@@ -695,7 +799,21 @@ ul {
     margin: 1% 0% 2%; }
   /*		MERCH		*/
   .bloq-merch .bloq-merch__filters h2 {
-    font-size: 1.8em; } }
+    font-size: 1.8em; }
+  /*		BIO		*/
+  .bloq-bio .bloq-bio__intro h2 {
+    font-size: 1.6em; } }
+
+@media screen and (max-width: 730px) {
+  /*		BIO		*/
+  .bloq-bio article div h3 {
+    font-size: 1.3em; }
+  .bloq-bio article div p {
+    font-size: 0.9em; }
+  .bloq-bio article .article5 img {
+    width: 80%; }
+  .bloq-bio .bloq-bio__outro h2 {
+    font-size: 2em; } }
 
 @media screen and (max-width: 680px) {
   /*		MUSIC		*/
@@ -722,7 +840,12 @@ ul {
 @media screen and (max-width: 640px) {
   /*		MERCH		*/
   .bloq-merch .bloq-merch__filters h2 {
-    font-size: 1.5em; } }
+    font-size: 1.5em; }
+  /*		BIO		*/
+  .bloq-bio article {
+    grid-template-rows: 30vh 70vh auto 40vh 30vh 30vh 20vh 50vh 50vh 50vh 50vh; }
+    .bloq-bio article div h3 {
+      font-size: 1em; } }
 
 @media screen and (max-width: 560px) {
   /*		MERCH		*/

@@ -19,6 +19,24 @@
 			}
 		}
 	}
+	/*		BIO		*/
+	.bloq-bio{
+		.bloq-bio__intro{
+			p{
+				font-size:1.2em;
+			}
+		}
+		article{
+			div{
+				h3{
+					font-size:2em;
+				}
+				p{
+					font-size:1em;
+				}
+			}
+		}
+	}
 }
 @media screen and (max-width: 830px){
 	/*		MUSIC		*/
@@ -65,7 +83,33 @@
 				font-size:1em;
 			}
 		}
-	} 
+	}
+	/*		BIO		*/
+	.bloq-bio{
+		.bloq-bio__intro{
+			h2{
+				font-size:2em;
+			}
+			p{
+				font-size:1.1em;
+			}
+		}
+		article{
+			div{
+				h3{
+					font-size:1.6em;
+				}
+			}
+			.article3{
+				img{
+					width:70%;
+					display:block;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+	}
 }
 @media screen and (max-width: 768px){
 	.home{
@@ -159,6 +203,39 @@
 			}
 		}
 	}
+	/*		BIO		*/
+	.bloq-bio{
+		.bloq-bio__intro{
+			h2{
+				font-size:1.6em;
+			}
+		}
+	}
+}
+@media screen and (max-width: 730px){
+	/*		BIO		*/
+	.bloq-bio{
+		article{
+			div{
+				h3{
+					font-size:1.3em;
+				}
+				p{
+					font-size:0.9em;
+				}
+			}
+			.article5{
+				img{
+					width:80%;
+				}
+			}
+		}
+		.bloq-bio__outro{
+			h2{
+				font-size:2em;
+			}
+		}
+	}
 }
 @media screen and (max-width: 680px){	
 	/*		MUSIC		*/
@@ -195,6 +272,17 @@
 		.bloq-merch__filters{
 			h2{
 				font-size:1.5em;
+			}
+		}
+	}
+	/*		BIO		*/
+	.bloq-bio{
+		article{
+			grid-template-rows: 30vh 70vh auto 40vh 30vh 30vh 20vh 50vh 50vh 50vh 50vh;
+			div{
+				h3{
+					font-size:1em;
+				}
 			}
 		}
 	}
