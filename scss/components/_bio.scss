@@ -277,6 +277,65 @@
 				top:110vh;
 			}
 		}
+		.article6 {
+			@include grid-items(contenido2-5, center, start);
+			@include flex(row, center, center);
+			width:100%;
+			padding:0%;
+			rotate:0deg;
+			top:0;
+			right:0;
+			+ dialog{
+				top:140vh;
+			}
+		}
+		.article7 {
+			@include grid-items(titulo3, center, start);
+			@include flex(row, center, center);
+			width:100%;
+			rotate:0deg;
+			top:0;
+			right:0;
+			+ dialog{
+				top:185vh;
+			}
+		}
+		.article8 {
+			@include grid-items(contenido3, center, start);
+			@include flex(row, center, center);
+			width:100%;
+			padding:0%;
+			rotate:0deg;
+			top:0;
+			right:0;
+			+ dialog{
+				top:210vh;
+			}
+		}
+		.article9 {
+			@include grid-items(contenido3-5, center, start);
+			@include flex(row, center, center);
+			width:100%;
+			padding:0%;
+			rotate:0deg;
+			top:0;
+			right:0;
+			+ dialog{
+				top:250vh;
+			}
+		}
+		.article10 {
+			@include grid-items(contenido3-75, center, start);
+			@include flex(row, center, center);
+			width:100%;
+			padding:0%;
+			rotate:0deg;
+			top:0;
+			right:0;
+			+ dialog{
+				top:290vh;
+			}
+		}
 		div {
 			.pulse-button {
 				width: 50px;

@@ -744,6 +744,80 @@ ul {
         top: 20vh; }
       .bloq-bio .article-mobile .article5 + dialog {
         top: 110vh; }
+    .bloq-bio .article-mobile .article6 {
+      grid-area: contenido2-5;
+      justify-self: center;
+      align-self: start;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0%;
+      rotate: 0deg;
+      top: 0;
+      right: 0; }
+      .bloq-bio .article-mobile .article6 + dialog {
+        top: 140vh; }
+    .bloq-bio .article-mobile .article7 {
+      grid-area: titulo3;
+      justify-self: center;
+      align-self: start;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      rotate: 0deg;
+      top: 0;
+      right: 0; }
+      .bloq-bio .article-mobile .article7 + dialog {
+        top: 185vh; }
+    .bloq-bio .article-mobile .article8 {
+      grid-area: contenido3;
+      justify-self: center;
+      align-self: start;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0%;
+      rotate: 0deg;
+      top: 0;
+      right: 0; }
+      .bloq-bio .article-mobile .article8 + dialog {
+        top: 210vh; }
+    .bloq-bio .article-mobile .article9 {
+      grid-area: contenido3-5;
+      justify-self: center;
+      align-self: start;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0%;
+      rotate: 0deg;
+      top: 0;
+      right: 0; }
+      .bloq-bio .article-mobile .article9 + dialog {
+        top: 250vh; }
+    .bloq-bio .article-mobile .article10 {
+      grid-area: contenido3-75;
+      justify-self: center;
+      align-self: start;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0%;
+      rotate: 0deg;
+      top: 0;
+      right: 0; }
+      .bloq-bio .article-mobile .article10 + dialog {
+        top: 290vh; }
     .bloq-bio .article-mobile div .pulse-button {
       width: 50px;
       height: 50px;
@@ -1044,7 +1118,7 @@ ul {
     display: none; }
   .bloq-bio .article-mobile {
     display: grid;
-    grid-template-areas: "titulo1 contenido1" ". contenido1" "imagen imagen" "titulo2 contenido2" "contenido2-5 contenido2" "contenido2-5 contenido2" "contenido3 titulo3" "contenido3 ." "contenido3 contenido3-5" "contenido3-75 contenido3-5" "contenido3-75 final"; } }
+    grid-template-areas: "titulo1 contenido1" ". contenido1" "imagen imagen" "titulo2 contenido2" ". contenido2" "contenido2-5 ." ". titulo3" "contenido3 ." ". contenido3-5" "contenido3-75 final"; } }
 
 @media screen and (max-width: 730px) {
   /*		BIO		*/
