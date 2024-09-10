@@ -1,183 +1,520 @@
-.bloq-bio{
-	mark{
-		background-color:transparent;
-		padding:0;
-		color:map-get($colores,"color-void");
-		letter-spacing:5px;
-		font-weight:500;
+.bloq-bio {
+	mark {
+		background-color: transparent;
+		padding: 0;
+		color: map-get($colores, "color-void");
+		letter-spacing: 5px;
+		font-weight: 500;
 	}
+
 	padding:0 2.5%;
-	.bloq-bio__intro{
+
+	.bloq-bio__intro {
 		@include flex(column, center, center);
-		margin-bottom:2%;
-		h2{
-			color:map-get($colores,"color-void");
-			text-transform:uppercase;
-			text-decoration:$text-decoration-line;
-			font-size:2.5em;
-			font-weight:500;
-			text-align:center;
+		margin-bottom: 2%;
+
+		h2 {
+			color: map-get($colores, "color-void");
+			text-transform: uppercase;
+			text-decoration: $text-decoration-line;
+			font-size: 2.5em;
+			font-weight: 500;
+			text-align: center;
 		}
-		p{
-			color:map-get($colores,"color-dark-void");
-			text-align:center;
-			font-size:1.3em;
+
+		p {
+			color: map-get($colores, "color-dark-void");
+			text-align: center;
+			font-size: 1.3em;
 			max-width: 60vw;
 		}
 	}
-	article{
+
+	article {
 		@include grid(1fr 1fr, 20vh 60vh auto 20vh 40vh 40vh 20vh 40vh 40vh 40vh 40vh, "titulo1  contenido1" ". contenido1" "imagen imagen"
 			"titulo2 contenido2" "contenido2-5 contenido2" "contenido2-5 contenido2" "contenido3 titulo3" "contenido3 ."
 			"contenido3 contenido3-5" "contenido3-75 contenido3-5" "contenido3-75 final", true, 0% 2%);
-		overflow:hidden;
-		div{
-			position:relative;
-			h3{
-				color:map-get($colores,"color-void");
-				font-size:2.5em;
-				font-weight:500;
+		overflow: hidden;
+
+		div {
+			position: relative;
+
+			h3 {
+				color: map-get($colores, "color-void");
+				font-size: 2.5em;
+				font-weight: 500;
 			}
-			p{
-				color:map-get($colores,"color-dark-void");
-				text-align:justify;
-				font-size:1.2em;
-				text-indent:1em;
+
+			p {
+				color: map-get($colores, "color-dark-void");
+				text-align: justify;
+				font-size: 1.2em;
+				text-indent: 1em;
 			}
-			img{
+
+			img {
 				filter: saturate(0%);
-				transform:scale(1);
-				transition:filter $transition-duration $transition-function, transform $transition-duration $transition-function;
-				&:hover{
-					filter:saturate(100%);
-					transform:scale(1.02);
+				transform: scale(1);
+				transition: filter $transition-duration $transition-function, transform $transition-duration $transition-function;
+
+				&:hover {
+					filter: saturate(100%);
+					transform: scale(1.02);
 				}
 			}
 		}
-		.grid-line{
-			&::before{
+
+		.grid-line {
+			&::before {
 				@extend %grid-line;
-				inline-size:2px;
-				block-size:100vh;
-				inset-block-start:0;
-				inset-inline-start:calc(calc(2%/2)*-1);
+				inline-size: 2px;
+				block-size: 100vh;
+				inset-block-start: 0;
+				inset-inline-start: calc(calc(2%/2)*-1);
 			}
-			&::after{
+
+			&::after {
 				@extend %grid-line;
 			}
 		}
-		.article1{
+
+		.article1 {
 			@include grid-items(titulo1, flex-end, start);
-			rotate:2deg;
-			top:5vh;
-			right:3vw;
+			rotate: 2deg;
+			top: 5vh;
+			right: 3vw;
 		}
-		.article2{
+
+		.article2 {
 			@include grid-items(contenido1);
 			@include flex(column, center, flex-end);
-			padding:0% 5%;
-			text-align-last:right;
-			p{
-				rotate:-1deg;
+			padding: 0% 5%;
+			text-align-last: right;
+
+			p {
+				rotate: -1deg;
 			}
+		}
+
+		.article3 {
+			@include grid-items(imagen, center, center);
+			z-index: 2;
+		}
+
+		.article4 {
+			@include grid-items(titulo2, flex-end, start);
+			top: 5vh;
+			rotate: 2deg;
+		}
+
+		.article5 {
+			@include grid-items(contenido2);
+			@include flex(column, center, center);
+			padding: 0% 5%;
+			text-align-last: right;
+
+			p {
+				rotate: -1deg;
+			}
+
+			img {
+				margin-top: 3%;
+				width: 60%;
+				rotate: -1deg;
+			}
+		}
+
+		.article6 {
+			@include grid-items(contenido2-5);
+			@include flex(column, end, flex-start);
+			padding: 0% 5%;
+			text-align-last: left;
+
+			p {
+				rotate: 1deg;
+			}
+		}
+
+		.article7 {
+			@include grid-items(titulo3);
+			@include flex(column, end, flex-end);
+
+			h3 {
+				text-align: right;
+				rotate: -2deg;
+				position: relative;
+				top: 7vh;
+			}
+		}
+
+		.article8 {
+			@include grid-items(contenido3);
+			@include flex(column, center, flex-start);
+			padding: 0% 5%;
+
+			p {
+				rotate: 1deg;
+			}
+		}
+
+		.article9 {
+			@include grid-items(contenido3-5);
+			@include flex(column, center, center);
+			padding: 0% 5%;
+
+			p {
+				rotate: -1deg;
+			}
+
+			img {
+				margin-top: 3%;
+				width: 70%;
+				rotate: -1deg;
+			}
+		}
+
+		.article10 {
+			@include grid-items(contenido3-75);
+			@include flex(column, center, flex-start);
+			padding: 0% 5%;
+
+			p {
+				rotate: 1deg;
+			}
+		}
+
+		.articlefinal {
+			@include grid-items(final);
+			@include flex(column, end, flex-end);
+		}
+	}
+
+	.bloq-bio__outro {
+		@include flex(column, center, center);
+		margin-bottom: 10%;
+
+		h2 {
+			color: map-get($colores, "color-void");
+			text-transform: uppercase;
+			text-decoration: $text-decoration-line;
+			font-size: 2.5em;
+			font-weight: 500;
+			text-align: center;
+		}
+
+		a {
+			color: map-get($colores, "color-white");
+			background-color: map-get($colores, "color-void");
+			padding: 1% 2%;
+			text-align: center;
+			font-size: 1.3em;
+			max-width: 60vw;
+			transition: background-color $transition-duration $transition-function;
+
+			&:hover {
+				background-color: map-get($colores, "color-accent");
+			}
+		}
+	}
+	.article-mobile {
+		display: none;
+		position:relative;
+		.article1 {
+			@include grid-items(titulo1, center, center);
+			rotate:0deg;
+			top:0;
+			right:0;
+			+ dialog{
+				top:5vh;
+			}
+		}
+		.article2 {
+			@include grid-items(contenido1, center, start);
+			width:100%;
+			padding:0%;
+			rotate:0deg;
+			top:0;
+			right:0;
+			.pulse-button{
+				top:30vh;
+				align-self:center;
+			}
+			+ dialog{
+				top:20vh;
+			}
+
 		}
 		.article3{
 			@include grid-items(imagen, center, center);
-			z-index:2;
-		}
-		.article4{
-			@include grid-items(titulo2, flex-end, start);
-			top:5vh;
-			rotate:2deg;
-		}
-		.article5{
-			@include grid-items(contenido2);
-			@include flex(column, center, center);
-			padding:0% 5%;
-			text-align-last:right;
-			p{
-				rotate:-1deg;
-			}
-			img{
-				margin-top:3%;
-				width:60%;
-				rotate:-1deg;
+			left:0.8%;
+			+ dialog{
+				top:45vh;
+				margin-left:auto;
+				margin-right:auto;
 			}
 		}
-		.article6{
-			@include grid-items(contenido2-5);
-			@include flex(column, end, flex-start);
-			padding:0% 5%;
-			text-align-last:left;
-			p{
-				rotate:1deg;
+		.article4 {
+			@include grid-items(titulo2, center, center);
+			@include flex(row, flex-start, center);
+			rotate:0deg;
+			top:0;
+			right:0;
+			+ dialog{
+				top:90vh;
 			}
 		}
-		.article7{
-			@include grid-items(titulo3);
-			@include flex(column, end, flex-end);
-			h3{
-				text-align:right;
-				rotate:-2deg;
+		.article5 {
+			@include grid-items(contenido2, center, start);
+			width:100%;
+			padding:0%;
+			rotate:0deg;
+			top:0;
+			right:0;
+			.pulse-button{
+				top:20vh;
+			}
+			+ dialog{
+				top:110vh;
+			}
+		}
+		div {
+			.pulse-button {
+				width: 50px;
+				height: 50px;
+				border: none;
+				background-color:transparent;
+				border-radius: 100%;
 				position:relative;
-				top:7vh;
+				&::before{
+					z-index:-1;
+					content: '';
+					position: relative;
+					display: block;
+					width: 200%;
+					height: 200%;
+					margin-left: -50%;
+					margin-top: -50%;
+					border-radius: 100%;
+					animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+				}
+				&::after{
+					z-index:-2;
+					content: '';
+					position: absolute;
+					left: 0; 
+					top: 0;
+					display: block;
+					width: 100%;
+					height: 100%;
+					border-radius: 100%;
+					animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
+				}
 			}
 		}
-		.article8{
-			@include grid-items(contenido3);
-			@include flex(column, center, flex-start);
-			padding:0% 5%;
-			p{
-				rotate:1deg;
+		.article__title{
+			.pulse-button{
+				&::before{
+					background-color: map-get($colores,"color-void");
+				}
+				&::after{
+					background-color:map-get($colores,"color-light-void");
+					box-shadow: 2px 2px 5px rgba(map-get($colores,"color-dark-void"), .4);
+				}
 			}
 		}
-		.article9{
-			@include grid-items(contenido3-5);
-			@include flex(column, center, center);
-			padding:0% 5%;
-			p{
-				rotate:-1deg;
+		.article__paragraph{
+			.pulse-button{
+				&::before{
+					background-color: map-get($colores,"color-void-secondary");
+				}
+				&::after{
+					background-color:map-get($colores,"color-void-secondary");
+					box-shadow: 2px 2px 5px rgba(map-get($colores,"color-dark-void"), .4);
+				}
+			}			
+		}
+		.article__img{
+			.pulse-button{
+				&::before{
+					background-color: map-get($colores,"color-accent");
+				}
+				&::after{
+					background-color:map-get($colores,"color-accent");
+					box-shadow: 2px 2px 5px rgba(map-get($colores,"color-dark-void"), .4);
+				}
 			}
-			img{
-				margin-top:3%;
-				width:70%;
-				rotate:-1deg;
+			+ dialog{
+				div{
+					img{
+						width:89%;
+					}
+				}
 			}
 		}
-		.article10{
-			@include grid-items(contenido3-75);
-			@include flex(column, center, flex-start);
-			padding:0% 5%;
-			p{
-				rotate:1deg;
+		.article__left{
+			+ dialog{
+				animation: close 1s forwards;
+					&[open] {
+						animation: open 1s forwards;
+					}
 			}
 		}
-		.articlefinal{
-			@include grid-items(final);
-			@include flex(column,end,flex-end);
+		.article__right{
+			+ dialog{
+				animation: close2 1s forwards;
+					&[open] {
+						animation: open2 1s forwards;
+					}
+			}
+		}
+		.article__center{
+			+ dialog{
+				animation: close3 1s forwards;
+					&[open] {
+						animation: open3 1s forwards;
+					}
+			}
+		}
+		dialog{
+			border:none;
+			background-color:rgba(map-get($colores,"color-white"),.8);
+			position: absolute;
+			width:80%;
+			z-index:3;
+			transition: display 1s allow-discrete, overlay 1s allow-discrete;
+			div{
+				@include flex(row, flex-start, start, 0% 3%);
+				padding:5% 5%;
+				h3{
+					color: map-get($colores, "color-void");
+					font-size: 2em;
+					text-align:center;
+					font-weight: 500;
+					width:90%;
+					margin-bottom:0;
+				}
+				button{
+					width:30px;
+					font-size:1em;
+					font-weight:700;
+					aspect-ratio:1/1;
+					border:none;
+					color:map-get($colores,"color-white");
+					border-radius:100%;
+					background-color:map-get($colores,"color-void");
+				}
+				p{
+					width:90%;
+				}
+				span{
+					@include flex(column,flex-start, center);
+					width:90%;
+					img{
+						width:80%;
+					}
+				}
+			}
 		}
 	}
-	.bloq-bio__outro{
-		@include flex(column, center, center);
-		margin-bottom:10%;
-		h2{
-			color:map-get($colores,"color-void");
-			text-transform:uppercase;
-			text-decoration:$text-decoration-line;
-			font-size:2.5em;
-			font-weight:500;
-			text-align:center;
-		}
-		a{
-			color:map-get($colores,"color-white");
-			background-color:map-get($colores,"color-void");
-			padding:1% 2%;
-			text-align:center;
-			font-size:1.3em;
-			max-width: 60vw;
-			transition:background-color $transition-duration $transition-function;
-			&:hover{
-				background-color:map-get($colores,"color-accent");
-			}
-		}
+	.open-button{
+		animation: open-btn 1s forwards;
+	}
+	.close-button{
+		animation: close-btn 1s forwards;
+	}
+}
+@keyframes pulse-ring {
+	0% {
+		transform: scale(.33);
+	}
+	80%, 100% {
+		opacity: 0;
+	}
+}
+@keyframes pulse-dot {
+	0% {
+		transform: scale(.8);
+	}
+	50% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(.8);
+	}
+}
+@keyframes open {
+	from {
+		opacity: 0;
+		transform:translatex(0%);
+	}
+	to {
+		opacity: 1;
+		transform:translatex(10%);
+	}
+}
+@keyframes open2 {
+	from {
+		opacity: 0;
+		transform:translatex(20%);
+	}
+	to {
+		opacity: 1;
+		transform:translatex(10%);
+	}
+}
+@keyframes open3 {
+	from {
+		opacity: 0;
+		transform:translatey(-20%);
+	}
+	to {
+		opacity: 1;
+		transform:translatey(0%);
+	}
+}
+@keyframes open-btn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes close {
+	from {
+		opacity: 1;
+		transform:translatex(10%);
+	}
+	to {
+		opacity: 0;
+		transform:translatex(0%);
+	}
+}
+@keyframes close2 {
+	from {
+		opacity: 1;
+		transform:translatex(10%);
+	}
+	to {
+		opacity: 0;
+		transform:translatex(20%);
+	}
+}
+@keyframes close3 {
+	from {
+		opacity: 1;
+		transform:translatey(0%);
+	}
+	to {
+		opacity: 0;
+		transform:translatey(-20%);
+	}
+}
+@keyframes close-btn {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
 	}
 }

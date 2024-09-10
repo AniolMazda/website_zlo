@@ -1,109 +1,126 @@
-@media screen and (max-width: 1200px){
-	.bloq-albums{
-		.bloq-albums__album{
-			.bloq-albums__album__content{
-				h2{
+@media screen and (max-width: 1200px) {
+	.bloq-albums {
+		.bloq-albums__album {
+			.bloq-albums__album__content {
+				h2 {
 					font-size: 2.5em;
 				}
 			}
 		}
 	}
 }
-@media screen and (max-width: 950px){
-	.bloq-albums{
-		.bloq-albums__album{
-			.bloq-albums__album__content{
-				h2{
+
+@media screen and (max-width: 950px) {
+	.bloq-albums {
+		.bloq-albums__album {
+			.bloq-albums__album__content {
+				h2 {
 					font-size: 2.2em;
 				}
 			}
 		}
 	}
+
 	/*		BIO		*/
-	.bloq-bio{
-		.bloq-bio__intro{
-			p{
-				font-size:1.2em;
+	.bloq-bio {
+		.bloq-bio__intro {
+			p {
+				font-size: 1.2em;
 			}
 		}
-		article{
-			div{
-				h3{
-					font-size:2em;
+
+		article {
+			div {
+				h3 {
+					font-size: 2em;
 				}
-				p{
-					font-size:1em;
+
+				p {
+					font-size: 1em;
 				}
 			}
 		}
 	}
 }
-@media screen and (max-width: 830px){
+
+@media screen and (max-width: 830px) {
+
 	/*		MUSIC		*/
-	.bloq-albums{
-		.bloq-albums__album{
-			.bloq-albums__album__content{
-				h2{
+	.bloq-albums {
+		.bloq-albums__album {
+			.bloq-albums__album__content {
+				h2 {
 					font-size: 1.8em;
-					letter-spacing:-2px;
+					letter-spacing: -2px;
 				}
-				p{
-					font-size:1.4em;
+
+				p {
+					font-size: 1.4em;
 				}
 			}
 		}
 	}
+
 	/*		MERCH		*/
-	.bloq-merch{
-		.bloq-merch__filters{
-			h2{
-				font-size:2em;
+	.bloq-merch {
+		.bloq-merch__filters {
+			h2 {
+				font-size: 2em;
 			}
-			select{
-				font-size:1em;
-				padding:1.2%;
+
+			select {
+				font-size: 1em;
+				padding: 1.2%;
 			}
 		}
-		.bloq-merch__products{
-			ul{
-				gap:2%;
-				li{
-					width:49%;
+
+		.bloq-merch__products {
+			ul {
+				gap: 2%;
+
+				li {
+					width: 49%;
 				}
 			}
 		}
 	}
+
 	/*		TEMPLATE PAGE		*/
-	.page{
-		footer{
-			p{
-				font-size:1.4em;
+	.page {
+		footer {
+			p {
+				font-size: 1.4em;
 			}
-			.sub-texto-footer{
-				font-size:1em;
+
+			.sub-texto-footer {
+				font-size: 1em;
 			}
 		}
 	}
+
 	/*		BIO		*/
-	.bloq-bio{
-		.bloq-bio__intro{
-			h2{
-				font-size:2em;
+	.bloq-bio {
+		.bloq-bio__intro {
+			h2 {
+				font-size: 2em;
 			}
-			p{
-				font-size:1.1em;
+
+			p {
+				font-size: 1.1em;
 			}
 		}
-		article{
-			div{
-				h3{
-					font-size:1.6em;
+
+		article {
+			div {
+				h3 {
+					font-size: 1.6em;
 				}
 			}
-			.article3{
-				img{
-					width:70%;
-					display:block;
+
+			.article3 {
+				img {
+					width: 70%;
+					display: block;
 					margin-left: auto;
 					margin-right: auto;
 				}
@@ -111,209 +128,254 @@
 		}
 	}
 }
-@media screen and (max-width: 768px){
-	.home{
-		header{
-			nav{
-				display:none;
+
+@media screen and (max-width: 768px) {
+	.home {
+		header {
+			nav {
+				display: none;
 			}
-			.home-nav-responsive{
-				display:block;
-				ul{
+
+			.home-nav-responsive {
+				display: block;
+
+				ul {
 					grid-template-columns: 20% 1fr 20%;
-					li{
+
+					li {
 						@include flex(column, center, center);
-						width:auto;
-						height:auto;
-						position:relative;
-						padding:2% 10%;
-						background-color:map-get($colores,"color-white");
-						transition:background-color $transition-duration $transition-function;
-						mix-blend-mode:lighten;
-						opacity:0.7;
-						a{
-							font-size:2.6em;
-							font-weight:600;
-							text-align:center;
-							color:map-get($colores,"color-dark-void");
-							transition:color $transition-duration $transition-function;
+						width: auto;
+						height: auto;
+						position: relative;
+						padding: 2% 10%;
+						background-color: map-get($colores, "color-white");
+						transition: background-color $transition-duration $transition-function;
+						mix-blend-mode: lighten;
+						opacity: 0.7;
+
+						a {
+							font-size: 2.6em;
+							font-weight: 600;
+							text-align: center;
+							color: map-get($colores, "color-dark-void");
+							transition: color $transition-duration $transition-function;
 						}
 					}
-					.bloq-logo-responsive{
-						mix-blend-mode:difference;
-						background-color:transparent;
-						img{
+
+					.bloq-logo-responsive {
+						mix-blend-mode: difference;
+						background-color: transparent;
+
+						img {
 							width: 70%;
-    						display: block;
-    						margin-left: auto;
-    						margin-right: auto;
+							display: block;
+							margin-left: auto;
+							margin-right: auto;
 						}
 					}
 				}
 			}
 		}
 	}
+
 	/*		MENU PAG INTERNA	*/
-	.page{
+	.page {
 		grid-template-columns: 150px 1fr;
-		header{
-			nav{
-				display:none;
+
+		header {
+			nav {
+				display: none;
 			}
-			.menu-responsive{
-				display:flex;
-				flex-grow:3;
-				align-items:center;
-				ul{
+
+			.menu-responsive {
+				display: flex;
+				flex-grow: 3;
+				align-items: center;
+
+				ul {
 					display: flex;
-	    			flex-direction: column;
-	    			height: 100%;
-	    			justify-content: space-around;
-	    			li{
-	    				background-color: transparent;
-	    				opacity: 0.7;
-	    				mix-blend-mode: difference;
-	    				a{
-	    					color: map-get($colores,"color-white");
-	    					font-size: 2em;
-	    				}
-	    			}
+					flex-direction: column;
+					height: 100%;
+					justify-content: space-around;
+
+					li {
+						background-color: transparent;
+						opacity: 0.7;
+						mix-blend-mode: difference;
+
+						a {
+							color: map-get($colores, "color-white");
+							font-size: 2em;
+						}
+					}
 				}
 			}
 		}
 	}
+
 	/*		MEDIA		*/
-	.bloq-media{
-		.bloq-media__hover__content{
-			h2{
+	.bloq-media {
+		.bloq-media__hover__content {
+			h2 {
 				font-size: 2.5em;
-				letter-spacing:-2px;
-				margin-bottom:0%;
+				letter-spacing: -2px;
+				margin-bottom: 0%;
 			}
-			hr{
+
+			hr {
 				margin: 1% 0% 2%;
 			}
 		}
 	}
-		/*		MERCH		*/
-	.bloq-merch{
-		.bloq-merch__filters{
-			h2{
-				font-size:1.8em;
+
+	/*		MERCH		*/
+	.bloq-merch {
+		.bloq-merch__filters {
+			h2 {
+				font-size: 1.8em;
 			}
 		}
 	}
+
 	/*		BIO		*/
-	.bloq-bio{
-		.bloq-bio__intro{
-			h2{
-				font-size:1.6em;
+	.bloq-bio {
+		.bloq-bio__intro {
+			h2 {
+				font-size: 1.6em;
+			}
+		}
+
+		.article-desktop {
+			display: none;
+		}
+
+		.article-mobile {
+			display: grid;
+			grid-template-areas:
+				"titulo1 contenido1"
+				". contenido1"
+				"imagen imagen"
+				"titulo2 contenido2"
+				"contenido2-5 contenido2"
+				"contenido2-5 contenido2"
+				"contenido3 titulo3"
+				"contenido3 ."
+				"contenido3 contenido3-5"
+				"contenido3-75 contenido3-5"
+				"contenido3-75 final";
+		}
+	}
+}
+
+@media screen and (max-width: 730px) {
+
+	/*		BIO		*/
+	.bloq-bio {
+		article {
+			div {
+				h3 {
+					font-size: 1.3em;
+				}
+
+				p {
+					font-size: 0.9em;
+				}
+			}
+
+			.article5 {
+				img {
+					width: 80%;
+				}
+			}
+		}
+
+		.bloq-bio__outro {
+			h2 {
+				font-size: 2em;
 			}
 		}
 	}
 }
-@media screen and (max-width: 730px){
-	/*		BIO		*/
-	.bloq-bio{
-		article{
-			div{
-				h3{
-					font-size:1.3em;
-				}
-				p{
-					font-size:0.9em;
-				}
-			}
-			.article5{
-				img{
-					width:80%;
-				}
-			}
-		}
-		.bloq-bio__outro{
-			h2{
-				font-size:2em;
-			}
-		}
-	}
-}
-@media screen and (max-width: 680px){	
+
+@media screen and (max-width: 680px) {
+
 	/*		MUSIC		*/
-	.bloq-albums{
-		.bloq-albums__album{
+	.bloq-albums {
+		.bloq-albums__album {
 			width: 95%;
-    		margin: 0% 2.5% 2.5%;
+			margin: 0% 2.5% 2.5%;
 		}
 	}
+
 	/*		MEDIA 		*/
-	.bloq-media{
+	.bloq-media {
 		@include grid(1fr, 1fr, "fotos" "videos", true, 2% 0%);
 	}
+
 	/*		MERCH		*/
-	.bloq-merch{
-		.bloq-merch__filters{
-			select{
-				width:25%;
+	.bloq-merch {
+		.bloq-merch__filters {
+			select {
+				width: 25%;
 			}
 		}
-		.bloq-merch__products{
-			ul{
-				gap:0%;
-				li{
-					width:100%;
+
+		.bloq-merch__products {
+			ul {
+				gap: 0%;
+
+				li {
+					width: 100%;
 				}
 			}
 		}
 	}
 }
-@media screen and (max-width: 640px){
+
+@media screen and (max-width: 640px) {
+
 	/*		MERCH		*/
-	.bloq-merch{
-		.bloq-merch__filters{
-			h2{
-				font-size:1.5em;
-			}
-		}
-	}
-	/*		BIO		*/
-	.bloq-bio{
-		article{
-			grid-template-rows: 30vh 70vh auto 40vh 30vh 30vh 20vh 50vh 50vh 50vh 50vh;
-			div{
-				h3{
-					font-size:1em;
-				}
+	.bloq-merch {
+		.bloq-merch__filters {
+			h2 {
+				font-size: 1.5em;
 			}
 		}
 	}
 }
-@media screen and (max-width: 560px){
+
+@media screen and (max-width: 560px) {
+
 	/*		MERCH		*/
-	.bloq-merch{
-		.bloq-merch__filters{
-			flex-wrap:wrap;
-			justify-content:center;
-			h2{
-				text-align:center;
-				width:100%;
-				margin-bottom:5%;
+	.bloq-merch {
+		.bloq-merch__filters {
+			flex-wrap: wrap;
+			justify-content: center;
+
+			h2 {
+				text-align: center;
+				width: 100%;
+				margin-bottom: 5%;
 			}
 		}
 	}
 }
-@media screen and (max-width: 476px){
+
+@media screen and (max-width: 476px) {
+
 	/*		HOME 		*/
-	.home{
-		header{
-			.home-nav-responsive{
-				ul{
-					li{
-						a{
-							font-size:2.2em;
+	.home {
+		header {
+			.home-nav-responsive {
+				ul {
+					li {
+						a {
+							font-size: 2.2em;
 						}
 					}
-					.bloq-logo-responsive{
-						img{
+
+					.bloq-logo-responsive {
+						img {
 							width: 90%;
 						}
 					}
@@ -321,86 +383,98 @@
 			}
 		}
 	}
+
 	/*		TEMPLATE PAGE		*/
-	.page{
+	.page {
 		grid-template-columns: 100px 1fr;
-		header{
-			.menu-responsive{
-				ul{
-					li{
-						a{
-							font-size:1.3em;
+
+		header {
+			.menu-responsive {
+				ul {
+					li {
+						a {
+							font-size: 1.3em;
 						}
 					}
 				}
 			}
 		}
-		main{
-			h1{
-				font-size:2.5em;
+
+		main {
+			h1 {
+				font-size: 2.5em;
 			}
 		}
-		footer{
-			p{
-				font-size:1.2em;
+
+		footer {
+			p {
+				font-size: 1.2em;
 			}
-			div{
-				a{
-					img{
-						width:25px;
+
+			div {
+				a {
+					img {
+						width: 25px;
 					}
 				}
 			}
 		}
 	}
+
 	/*		MUSIC		*/
-	.bloq-albums{
-		.bloq-albums__album{
-			.bloq-albums__album__content{
-				h2{
+	.bloq-albums {
+		.bloq-albums__album {
+			.bloq-albums__album__content {
+				h2 {
 					font-size: 1.4em;
 				}
 			}
 		}
 	}
+
 	/*		MEDIA		*/
-	.bloq-media{
-		.bloq-media__hover__content{
-			h2{
+	.bloq-media {
+		.bloq-media__hover__content {
+			h2 {
 				font-size: 2em;
 			}
 		}
 	}
 }
-@media screen and (max-width: 425px){
+
+@media screen and (max-width: 425px) {
+
 	/*		MERCH		*/
-	.bloq-merch{
-		.bloq-merch__products{
-			ul{
-				li{
-					div{
-						h3{
-							font-size:1.4em;
+	.bloq-merch {
+		.bloq-merch__products {
+			ul {
+				li {
+					div {
+						h3 {
+							font-size: 1.4em;
 						}
-						p{
-							font-size:1.3em;
+
+						p {
+							font-size: 1.3em;
 						}
 					}
 				}
 			}
 		}
-		.bloq-merch__filters{
-			select{
-				width:40%;
+
+		.bloq-merch__filters {
+			select {
+				width: 40%;
 			}
 		}
 	}
 }
-@media screen and (max-width: 425px){
-	.bloq-merch{
-		.bloq-merch__filters{
-			select{
-				width:60%;
+
+@media screen and (max-width: 425px) {
+	.bloq-merch {
+		.bloq-merch__filters {
+			select {
+				width: 60%;
 			}
 		}
 	}
