@@ -131,6 +131,8 @@ ul {
         text-align: center;
         color: #02010A;
         transition: color 0.4s ease-out; }
+    .home header nav ul .bloq-link-menu {
+      margin: 5%; }
     .home header nav ul .home-item-1 {
       grid-area: menu1;
       justify-self: start;
@@ -673,16 +675,6 @@ ul {
       font-size: 2.5em;
       font-weight: 500;
       text-align: center; }
-    .bloq-bio .bloq-bio__outro a {
-      color: #FBFAFF;
-      background-color: #1D0B43;
-      padding: 1% 2%;
-      text-align: center;
-      font-size: 1.3em;
-      max-width: 60vw;
-      transition: background-color 0.4s ease-out; }
-      .bloq-bio .bloq-bio__outro a:hover {
-        background-color: #858AE3; }
   .bloq-bio .article-mobile {
     display: none;
     position: relative; }
@@ -1053,6 +1045,8 @@ ul {
     display: block; }
     .home header .home-nav-responsive ul {
       grid-template-columns: 20% 1fr 20%; }
+      .home header .home-nav-responsive ul .bloq-link-menu-responsive {
+        margin: 10%; }
       .home header .home-nav-responsive ul li {
         display: flex;
         flex-direction: column;
@@ -1118,7 +1112,9 @@ ul {
     display: none; }
   .bloq-bio .article-mobile {
     display: grid;
-    grid-template-areas: "titulo1 contenido1" ". contenido1" "imagen imagen" "titulo2 contenido2" ". contenido2" "contenido2-5 ." ". titulo3" "contenido3 ." ". contenido3-5" "contenido3-75 final"; } }
+    grid-template-areas: "titulo1 contenido1" ". contenido1" "imagen imagen" "titulo2 contenido2" ". contenido2" "contenido2-5 ." ". titulo3" "contenido3 ." ". contenido3-5" "contenido3-75 final"; }
+  .bloq-bio .bloq-bio__outro h2 {
+    font-size: 1.6em; } }
 
 @media screen and (max-width: 730px) {
   /*		BIO		*/
@@ -1127,9 +1123,7 @@ ul {
   .bloq-bio article div p {
     font-size: 0.9em; }
   .bloq-bio article .article5 img {
-    width: 80%; }
-  .bloq-bio .bloq-bio__outro h2 {
-    font-size: 2em; } }
+    width: 80%; } }
 
 @media screen and (max-width: 680px) {
   /*		MUSIC		*/
@@ -1156,7 +1150,14 @@ ul {
 @media screen and (max-width: 640px) {
   /*		MERCH		*/
   .bloq-merch .bloq-merch__filters h2 {
-    font-size: 1.5em; } }
+    font-size: 1.5em; }
+  /*		BIO 		*/
+  .bloq-bio .article-mobile dialog div h3 {
+    font-size: 1.6em; }
+  .bloq-bio .bloq-bio__outro a {
+    font-size: 1.2em;
+    text-align: center;
+    width: 80%; } }
 
 @media screen and (max-width: 560px) {
   /*		MERCH		*/
@@ -1166,10 +1167,16 @@ ul {
     .bloq-merch .bloq-merch__filters h2 {
       text-align: center;
       width: 100%;
-      margin-bottom: 5%; } }
+      margin-bottom: 5%; }
+  .bloq-bio .article-mobile .article__img + dialog div img {
+    width: 85%; }
+  .bloq-bio .article-mobile .article3 + dialog {
+    top: 55vh; } }
 
 @media screen and (max-width: 476px) {
   /*		HOME 		*/
+  .home header .home-nav-responsive ul .bloq-link-menu-responsive {
+    margin: 15%; }
   .home header .home-nav-responsive ul li a {
     font-size: 2.2em; }
   .home header .home-nav-responsive ul .bloq-logo-responsive img {
@@ -1199,8 +1206,58 @@ ul {
   .bloq-merch .bloq-merch__products ul li div p {
     font-size: 1.3em; }
   .bloq-merch .bloq-merch__filters select {
-    width: 40%; } }
+    width: 60%; }
+  /*		BIO 		*/
+  .bloq-bio .article-mobile dialog {
+    width: 90%; }
+    .bloq-bio .article-mobile dialog div h3 {
+      font-size: 1.5em; }
+    .bloq-bio .article-mobile dialog div p {
+      font-size: 0.8em; }
+  .bloq-bio mark {
+    letter-spacing: 4px; }
+  /*		ANIMACIONES		*/
+  @keyframes open {
+    from {
+      opacity: 0;
+      transform: translatex(0%); }
+    to {
+      opacity: 1;
+      transform: translatex(5%); } }
+  @keyframes open2 {
+    from {
+      opacity: 0;
+      transform: translatex(15%); }
+    to {
+      opacity: 1;
+      transform: translatex(5%); } }
+  @keyframes close {
+    from {
+      opacity: 1;
+      transform: translatex(5%); }
+    to {
+      opacity: 0;
+      transform: translatex(0%); } }
+  @keyframes close2 {
+    from {
+      opacity: 1;
+      transform: translatex(5%); }
+    to {
+      opacity: 0;
+      transform: translatex(15%); } } }
 
-@media screen and (max-width: 425px) {
-  .bloq-merch .bloq-merch__filters select {
-    width: 60%; } }
+@media screen and (max-width: 375px) {
+  .bloq-bio .article-mobile .article3 + dialog {
+    top: 65vh; }
+  .bloq-bio .bloq-bio__outro a {
+    font-size: 1em; } }
+
+@media screen and (max-width: 360px) {
+  .bloq-bio .article-mobile dialog div h3 {
+    font-size: 1.2em; }
+  .bloq-bio .article-mobile dialog div p {
+    font-size: 0.7em; } }
+
+@media screen and (max-width: 320px) {
+  .bloq-bio .article-mobile dialog div h3 {
+    font-size: 1.1em; } }

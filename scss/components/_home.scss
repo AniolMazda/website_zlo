@@ -40,6 +40,9 @@
 						transition:color $transition-duration $transition-function;
 					}
 				}
+				.bloq-link-menu{
+					margin:5%;
+				}
 				.home-item-1{
 					@include grid-items(menu1, start, start);
 				}

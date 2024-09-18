@@ -201,20 +201,6 @@
 			font-weight: 500;
 			text-align: center;
 		}
-
-		a {
-			color: map-get($colores, "color-white");
-			background-color: map-get($colores, "color-void");
-			padding: 1% 2%;
-			text-align: center;
-			font-size: 1.3em;
-			max-width: 60vw;
-			transition: background-color $transition-duration $transition-function;
-
-			&:hover {
-				background-color: map-get($colores, "color-accent");
-			}
-		}
 	}
 	.article-mobile {
 		display: none;

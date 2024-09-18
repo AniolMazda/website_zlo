@@ -141,7 +141,9 @@
 
 				ul {
 					grid-template-columns: 20% 1fr 20%;
-
+					.bloq-link-menu-responsive{
+						margin:10%;
+					}
 					li {
 						@include flex(column, center, center);
 						width: auto;
@@ -165,7 +167,6 @@
 					.bloq-logo-responsive {
 						mix-blend-mode: difference;
 						background-color: transparent;
-
 						img {
 							width: 70%;
 							display: block;
@@ -263,6 +264,11 @@
 				". contenido3-5"
 				"contenido3-75 final";
 		}
+		.bloq-bio__outro{
+			h2{
+				font-size:1.6em;
+			}
+		}
 	}
 }
 
@@ -285,12 +291,6 @@
 				img {
 					width: 80%;
 				}
-			}
-		}
-
-		.bloq-bio__outro {
-			h2 {
-				font-size: 2em;
 			}
 		}
 	}
@@ -341,6 +341,25 @@
 			}
 		}
 	}
+	/*		BIO 		*/
+	.bloq-bio{
+		.article-mobile{
+			dialog{
+				div{
+					h3{
+						font-size:1.6em;
+					}
+				}
+			}
+		}
+		.bloq-bio__outro{
+			a{
+				font-size:1.2em;
+				text-align:center;
+				width:80%;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 560px) {
@@ -358,6 +377,24 @@
 			}
 		}
 	}
+	.bloq-bio{
+		.article-mobile{
+			.article__img{
+				+ dialog{
+					div{
+						img{
+							width:85%;
+						}
+					}
+				}
+			}
+			.article3{
+				+ dialog{
+					top:55vh;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 476px) {
@@ -367,6 +404,9 @@
 		header {
 			.home-nav-responsive {
 				ul {
+					.bloq-link-menu-responsive{
+						margin:15%;
+					}
 					li {
 						a {
 							font-size: 2.2em;
@@ -463,17 +503,113 @@
 
 		.bloq-merch__filters {
 			select {
-				width: 40%;
+				width: 60%;
 			}
+		}
+	}
+	/*		BIO 		*/
+	.bloq-bio{
+		.article-mobile{
+			dialog{
+				width:90%;
+				div{
+					h3{
+						font-size:1.5em;
+					}
+					p{
+						font-size:0.8em;
+					}
+				}
+			}
+		}
+		mark{
+			letter-spacing:4px;
+		}
+	}
+	/*		ANIMACIONES		*/
+	@keyframes open {
+		from {
+			opacity: 0;
+			transform:translatex(0%);
+		}
+		to {
+			opacity: 1;
+			transform:translatex(5%);
+		}
+	}
+	@keyframes open2 {
+		from {
+			opacity: 0;
+			transform:translatex(15%);
+		}
+		to {
+			opacity: 1;
+			transform:translatex(5%);
+		}
+	}
+	@keyframes close {
+		from {
+			opacity: 1;
+			transform:translatex(5%);
+		}
+		to {
+			opacity: 0;
+			transform:translatex(0%);
+		}
+	}
+	@keyframes close2 {
+		from {
+			opacity: 1;
+			transform:translatex(5%);
+		}
+		to {
+			opacity: 0;
+			transform:translatex(15%);
 		}
 	}
 }
 
-@media screen and (max-width: 425px) {
-	.bloq-merch {
-		.bloq-merch__filters {
-			select {
-				width: 60%;
+@media screen and (max-width: 375px) {
+	.bloq-bio{
+		.article-mobile{
+			.article3{
+				+ dialog{
+					top:65vh;
+				}
+			}
+		}
+		.bloq-bio__outro{
+			a{
+				font-size:1em;
+			}
+		}
+	}
+}
+@media screen and (max-width: 360px){
+	.bloq-bio{
+		.article-mobile{
+			dialog{
+				div{
+					h3{
+						font-size:1.2em;
+					}
+					p{
+						font-size:0.7em;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 320px){
+	.bloq-bio{
+		.article-mobile{
+			dialog{
+				div{
+					h3{
+						font-size:1.1em;
+					}
+				}
 			}
 		}
 	}
