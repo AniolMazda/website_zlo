@@ -44,7 +44,21 @@
 }
 
 @media screen and (max-width: 830px) {
-
+	/*		GENERALES	*/
+	.boton-default{
+		&:before{
+			margin-top:14px;
+		}
+		.top{
+			height:14px;
+		}
+		.bottom{
+			height:14px;
+			span{
+  				top: -14px;
+  			}
+		}
+	}
 	/*		MUSIC		*/
 	.bloq-albums {
 		.bloq-albums__album {
